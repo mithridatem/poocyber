@@ -1,13 +1,14 @@
 <?php
 class Categorie{
+    //attributs
     private ?int $id_categorie;
     private ?string $nom_categorie;
     private array $articles;
-
+    //constructeur
     public function __construct(){
         $this->articles = [];
     }
-
+    //getters and setters
     public function getId():?int{
         return $this->id_categorie;
     }
@@ -26,7 +27,6 @@ class Categorie{
     public function addArticle(Article $article):void{
         $this->articles[] = $article;
     }
-
     public function delArticle(Article $article){
         foreach ($this->articles as $key => $value) {
             if($value === $article){
