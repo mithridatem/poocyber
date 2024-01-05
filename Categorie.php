@@ -28,9 +28,9 @@ class Categorie{
     }
 
     public function delArticle(Article $article){
-        foreach ($this->articles as $value) {
+        foreach ($this->articles as $key => $value) {
             if($value === $article){
-                unset($value);
+                unset($this->articles[$key]);
             }
         }
     }

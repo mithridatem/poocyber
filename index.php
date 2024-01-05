@@ -30,3 +30,7 @@ echo '</pre>';
 //echo $art1->getUtilisateur()->getNom();
 echo $art1->getCategories()[0]->getNom().'<br>';
 echo $art1->getCategories()[1]->getNom().'<br>';
+$art1->delCategorie($cat1);
+echo '<pre>';
+var_dump($art1);
+echo '</pre>';

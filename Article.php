@@ -40,9 +40,9 @@ class Article{
     }
 
     public function delCategorie(Categorie $categorie){
-        foreach ($this->categories as $value) {
+        foreach ($this->categories as $key => $value) {
             if($value === $categorie){
-                unset($value);
+                unset($this->categories[$key]);
             }
         }
     }
